@@ -10,8 +10,15 @@
 }
 
 
-.banner_content {
+.banner {
     background-color: var(--background);
+    padding: 70px 15px;
+    box-sizing: border-box;
+}
+
+.banner_content {
+    max-width: 1140px;
+    margin: 0 auto;
     display: grid;
     gap: 20px;
     grid-template-columns: 2fr 1.2fr 1fr 1fr;
@@ -19,8 +26,6 @@
     grid-template-areas:
         "banner1 banner1 banner1 banner1"
         "texto_botao banner2 banner3 banner4";
-    padding: 30px;
-    box-sizing: border-box;
 }
 
 .banner1 {
@@ -91,11 +96,11 @@ img {
 
 .sea_container {
     background-color: var(--background2);
-    padding: 100px 15px;
+    padding: 100px 40px;
     display: grid;
     gap: 15px;
     grid-template-rows: repeat(2, 300px);
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .sea_container img {
@@ -120,6 +125,35 @@ img {
     grid-row: 1/3;
 }
 
-.sea .img {
+.sea_container .img {
     border-radius: 7px;
+}
+
+@media (max-width: 600px) {
+    .banner {
+        padding: 40px 15px;
+    }
+
+    .banner_content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 260px auto repeat(3, 200px);
+        grid-template-areas:
+            "banner1"
+            "texto_botao"
+            "banner2"
+            "banner3"
+            "banner4";
+    }
+
+    .sea_container {
+        padding: 40px 15px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 220px);
+    }
+
+    .sea-1,
+    .sea-2,
+    .sea-3 {
+        grid-row: auto;
+    }
 }
