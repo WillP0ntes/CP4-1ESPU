@@ -1,0 +1,72 @@
+@media (max-width:  600px) {
+    .banner_content {
+        max-height: fit-content;
+        max-width: 600px;
+        padding: 70px 30px;
+        border: 100px 10px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: minmax(260px, 430px) minmax(180px, 260px);
+        grid-template-areas:
+            "banner1 banner1 banner1"
+            "texto_botao texto_botao texto_botao"
+            "banner2 banner3 banner4";
+        box-sizing: border-box;
+    }
+
+    .banner-1 {
+        grid-area: banner1;
+        overflow: hidden;
+    }
+
+    .banner-2 {
+        grid-area: banner2;
+        overflow: hidden;
+    }
+
+    .banner-3 {
+        grid-area: banner3;
+        overflow: hidden;
+    }
+
+    .banner-4 {
+        grid-area: banner4;
+        overflow: hidden;
+    }
+    .texto_botao {
+        display: flex;
+        align-items: start;
+        display: grid;
+        grid-area: texto_botao;
+        color: var(--buttoncolor);
+        gap: 15px;
+        box-sizing: border-box;
+    }
+
+    .sea_container {
+        max-height: fit-content;
+        max-width: 600px;
+        padding: 70px 30px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(180px, 260px);
+        grid-template-areas: 
+            "sea1 sea3"
+            "sea2 sea3";
+        box-sizing: border-box;
+
+        img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+        }
+    }
+
+    .sea-1 { grid-area: sea1; } .sea-2 { grid-area: sea2; } .sea-3 { grid-area: sea3; }
+}
