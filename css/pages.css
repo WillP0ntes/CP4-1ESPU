@@ -4,10 +4,17 @@
     padding: 0 0 40px 0 ;
 }
 
+.pri {
+        background-color: var(--background);
+}
+
+.seg {
+        background-color: var(--background2);
+}
+
 .banner_content {
-    max-height: 640px;
+    max-height: fit-content;
     max-width: 1140px;
-    background-color: var(--background);
     padding: 70px 30px;
     border: 100px 10px;
     display: grid;
@@ -18,10 +25,6 @@
         "banner1 banner1 banner1 banner1"
         "texto_botao banner2 banner3 banner4";
     box-sizing: border-box;
-    
-    img {
-        border-radius: 10px;
-    }
 }
 
 .banner-1 {
@@ -64,19 +67,33 @@
     border: none;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.texto_botao .botao:hover {
+    background-color: #8b817a;
+    color: #ffffff;
 }
 
 .sea_container {
-    max-height: 640px;
-    max-width: 1140px;
-    padding: 70px 30px;
-    border: 100px 10px;
-    background-color: var(--background2);
+    max-height: fit-content;
+    max-width: fit-content;
+    padding: 70px 40px;
     display: grid;
     gap: 15px;
     grid-template-rows: repeat(2, 300px);
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     box-sizing: border-box;
+
+    img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+    img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
 }
 
 .sea-1 {
