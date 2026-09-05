@@ -5,6 +5,7 @@
 }
 
 .banner_content {
+    max-height: 640px;
     max-width: 1140px;
     background-color: var(--background);
     padding: 70px 30px;
@@ -66,6 +67,7 @@
 }
 
 .sea_container {
+    max-height: 640px;
     max-width: 1140px;
     padding: 70px 30px;
     border: 100px 10px;
