@@ -1,0 +1,62 @@
+@media (max-width: 600px) {
+    .banner {
+        padding: 40px 15px;
+    }
+
+    .banner_content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 260px auto repeat(3, 200px);
+        grid-template-areas:
+            "banner1"
+            "texto_botao"
+            "banner2"
+            "banner3"
+            "banner4";
+    }
+
+    .sea_container {
+        padding: 40px 15px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 115px);
+    }
+
+    .sea_container .img:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .sea_container .img:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .sea_container .img:nth-child(3) {
+        grid-column: 1;
+        grid-row: 3 / span 2;
+    }
+
+    .sea_container .img:nth-child(4) {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+
+    .sea_container .img:nth-child(5) {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .sea_container .img:nth-child(6) {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .sea_container .img:nth-child(7) {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    .sea_container .img:nth-child(8) {
+        grid-column: 2;
+        grid-row: 5;
+    }
+}
