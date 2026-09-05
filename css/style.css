@@ -58,6 +58,12 @@
     box-sizing: border-box;
 }
 
+.texto_botao h2 {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
 .texto_botao .botao {
     border-radius: 30px;
     color: var(--background);
@@ -67,6 +73,12 @@
     border: none;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.texto_botao .botao:hover {
+    background-color: #8b817a;
+    color: #ffffff;
 }
 
 img {
@@ -84,6 +96,16 @@ img {
     gap: 15px;
     grid-template-rows: repeat(2, 300px);
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.sea_container img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.sea_container img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
 .sea-1 {
